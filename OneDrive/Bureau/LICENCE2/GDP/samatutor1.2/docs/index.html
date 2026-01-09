@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamaTutor - Révolutionnez l'Éducation Technique</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Aller au contenu</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="logo-nav">🎓 SamaTutor</div>
+        <button class="burger-nav" aria-label="Menu" onclick="toggleMobileMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+            <li><a href="#portes">Les Portes</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showLogin();" class="nav-cta">Se Connecter</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-landing">
+        <div class="hero-content-landing">
+            <h1 class="hero-title">Révolutionnez l'Éducation Technique</h1>
+            <p class="hero-subtitle">Une plateforme hybride pour enseignants et étudiants : production de contenus pédagogiques d'exception et tutorat intelligent 24/7</p>
+            <div class="cta-buttons-hero">
+                <a href="#portes" class="btn btn-hero-primary">Découvrir les Portes</a>
+                <a href="#tarifs" class="btn btn-hero-secondary">Voir les Tarifs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fonctionnalites" class="features-section">
+        <h2 class="section-title-landing">Pourquoi SamaTutor ?</h2>
+        <div class="features-grid">
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">⚡</div>
+                <h3>Gain de Temps</h3>
+                <p>Automatisez la mise en forme complexe de vos cours avec Typst et Mermaid. Plus de temps pour l'essentiel : enseigner.</p>
+            </div>
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">🎨</div>
+                <h3>Qualité Visuelle</h3>
+                <p>Des documents PDF HD avec rendu mathématique, diagrammes professionnels et mise en page impeccable.</p>
+            </div>
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">🤖</div>
+                <h3>IA Personnalisée</h3>
+                <p>Un tuteur intelligent qui s'adapte au style de chaque professeur et aux besoins de chaque étudiant.</p>
+            </div>
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">🎯</div>
+                <h3>Approche Maïeutique</h3>
+                <p>L'étudiant apprend par le questionnement et la réflexion guidée, pas par la simple mémorisation.</p>
+            </div>
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">📚</div>
+                <h3>Basé sur Vos Cours</h3>
+                <p>Le tuteur IA utilise les documents réels fournis par les professeurs pour un enseignement cohérent.</p>
+            </div>
+            <div class="feature-card-landing">
+                <div class="feature-icon-landing">🌍</div>
+                <h3>Accessible 24/7</h3>
+                <p>Support pédagogique disponible à tout moment, partout, pour tous les étudiants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page d'accueil: Les Deux Portes de SamaTutor -->
+    <section id="portes" class="section deux-portes" aria-label="Page d'accueil SamaTutor">
+    <!-- Page d'accueil: Les Deux Portes de SamaTutor -->
+    <section id="portes" class="section deux-portes" aria-label="Page d'accueil SamaTutor">
+        <h2 class="section-title-landing">Les Deux Portes de SamaTutor</h2>
+        <div class="portes-container">
+            <div class="porte-card">
+                <h3>🎓 L'Atelier</h3>
+                <p class="porte-subtitle">Pour les Enseignants</p>
+                <ul class="porte-features">
+                    <li>Ingénierie par objectifs pédagogiques</li>
+                    <li>Analyse de vos références existantes</li>
+                    <li>Génération automatique de diagrammes (Mermaid)</li>
+                    <li>Mise en page professionnelle (Typst)</li>
+                    <li>Éditeur visuel Drag &amp; Drop</li>
+                    <li>Export PDF haute définition</li>
+                    <li>Création d'examens et de supports de cours</li>
+                </ul>
+                <button class="btn btn-primary" onclick="showLogin('enseignant')">Essayer l'Atelier</button>
+            </div>
+
+            <div class="porte-card">
+                <h3>📖 Le Tuteur</h3>
+                <p class="porte-subtitle">Pour les Étudiants</p>
+                <ul class="porte-features">
+                    <li>Tutorat interactif personnalisé</li>
+                    <li>Quiz dynamiques adaptatifs</li>
+                    <li>Feedback immédiat et explications détaillées</li>
+                    <li>Basé sur les documents de votre prof</li>
+                    <li>Apprentissage par questionnement</li>
+                    <li>Disponible 24h/24, 7j/7</li>
+                    <li>Suivi de progression individuel</li>
+                </ul>
+                <button class="btn btn-primary" onclick="showLogin('etudiant')">Découvrir le Tuteur</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarifs" class="pricing-section">
+        <h2 class="section-title-landing">Tarifs Simples et Transparents</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card-landing">
+                <h3>Sama Pro</h3>
+                <p class="pricing-subtitle">Pour les Enseignants</p>
+                <div class="price-tag">5000 <span class="price-period">CFA/mois</span></div>
+                <ul class="pricing-features-list">
+                    <li>✓ Accès complet à l'Atelier</li>
+                    <li>✓ Génération illimitée de documents</li>
+                    <li>✓ Rendu Typst & Mermaid</li>
+                    <li>✓ Éditeur visuel avancé</li>
+                    <li>✓ Support prioritaire</li>
+                </ul>
+                <button class="btn btn-pricing" onclick="showLogin('enseignant')">Commencer</button>
+            </div>
+
+            <div class="pricing-card-landing pricing-featured">
+                <div class="featured-badge">Populaire</div>
+                <h3>Sama Tutor</h3>
+                <p class="pricing-subtitle">Pour les Étudiants</p>
+                <div class="price-tag">1500 <span class="price-period">CFA/mois</span></div>
+                <ul class="pricing-features-list">
+                    <li>✓ Accès au Tuteur IA</li>
+                    <li>✓ Quiz illimités</li>
+                    <li>✓ Feedback personnalisé</li>
+                    <li>✓ Suivi de progression</li>
+                    <li>✓ Support étudiant</li>
+                </ul>
+                <button class="btn btn-pricing" onclick="showLogin('etudiant')">S'inscrire</button>
+            </div>
+
+            <div class="pricing-card-landing">
+                <h3>Licence B2B</h3>
+                <p class="pricing-subtitle">Pour les Établissements</p>
+                <div class="price-tag">Sur devis</div>
+                <ul class="pricing-features-list">
+                    <li>✓ Accès multi-utilisateurs</li>
+                    <li>✓ Personnalisation de marque</li>
+                    <li>✓ Tableau de bord administrateur</li>
+                    <li>✓ Statistiques et analytics</li>
+                    <li>✓ Support dédié</li>
+                </ul>
+                <button class="btn btn-pricing" onclick="showLogin('enseignant')">Nous Contacter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-landing">
+        <p>&copy; 2026 SamaTutor - Révolutionner l'éducation technique en Afrique francophone</p>
+        <p>Fait avec ❤️ pour les enseignants et étudiants du Sénégal et d'ailleurs</p>
+    </footer>
+            <div class="porte-card">
+                <h3>🎓 L'Atelier</h3>
+                <p class="porte-subtitle">Pour les Enseignants</p>
+                <ul class="porte-features">
+                    <li>Ingénierie par objectifs pédagogiques</li>
+                    <li>Analyse de vos références existantes</li>
+                    <li>Génération automatique de diagrammes (Mermaid)</li>
+                    <li>Mise en page professionnelle (Typst)</li>
+                    <li>Éditeur visuel Drag &amp; Drop</li>
+                    <li>Export PDF haute définition</li>
+                    <li>Création d'examens et de supports de cours</li>
+                </ul>
+                <button class="btn btn-primary" onclick="showLogin('enseignant')">Essayer l'Atelier</button>
+            </div>
+
+            <div class="porte-card">
+                <h3>📖 Le Tuteur</h3>
+                <p class="porte-subtitle">Pour les Étudiants</p>
+                <ul class="porte-features">
+                    <li>Tutorat interactif personnalisé</li>
+                    <li>Quiz dynamiques adaptatifs</li>
+                    <li>Feedback immédiat et explications détaillées</li>
+                    <li>Basé sur les documents de votre prof</li>
+                    <li>Apprentissage par questionnement</li>
+                    <li>Disponible 24h/24, 7j/7</li>
+                    <li>Suivi de progression individuel</li>
+                </ul>
+                <button class="btn btn-primary" onclick="showLogin('etudiant')">Découvrir le Tuteur</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Écran de connexion -->
+    <section id="authScreen" class="auth-screen hidden" role="region" aria-label="Écran de connexion">
+        <div class="auth-card">
+            <button class="btn-back" onclick="showLandingPage()">← Retour</button>
+            <h2>🎓 Bienvenue sur SamaTutor</h2>
+            <div class="form-group">
+                <label for="userType">Type de compte</label>
+                <select id="userType" title="Type de compte">
+                    <option value="enseignant">Enseignant (L'Atelier)</option>
+                    <option value="etudiant">Étudiant (Le Tuteur)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+                <label for="fullName">Nom complet</label>
+                <input type="text" id="fullName" placeholder="Votre nom">
+            </div>
+            <div class="form-group form-group-checkbox">
+                <input type="checkbox" id="rememberMe" checked>
+                <label for="rememberMe">Se souvenir de moi</label>
+            </div>
+            <button class="btn btn-primary btn-full-width" onclick="login()">Se connecter / S'inscrire</button>
+        </div>
+    </section>
+
+    <!-- Application principale -->
+    <div id="mainApp" class="hidden">
+        <div class="header" role="banner">
+            <div class="logo">🎓 SamaTutor</div>
+            <button id="burgerBtn" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebarNav">☰</button>
+            <div class="ai-model">
+                <label for="aiModelSelector">Modèle IA:</label>
+                <select id="aiModelSelector" title="Choisir le fournisseur IA">
+                    <option value="gpt-3.5-turbo">OpenAI (gpt-3.5-turbo)</option>
+                    <option value="ollama:llama3">Ollama (llama3)</option>
+                </select>
+            </div>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button class="btn btn-secondary" onclick="logout()">Déconnexion</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="sidebarOverlay" class="hidden" onclick="closeSidebar()" aria-hidden="true"></div>
+            <div class="dashboard">
+                <nav class="sidebar" aria-label="Navigation principale">
+                    <ul class="sidebar-nav" id="sidebarNav" role="list">
+                        <!-- Généré dynamiquement -->
+                    </ul>
+                </nav>
+
+                <main class="main-content" id="mainContent" role="main" tabindex="-1">
+                    <!-- Contenu dynamique généré par l'application -->
+                </main>
+            </div>
+        </div>
+
+        <!-- Modal pour éditer un document -->
+        <div id="editModal" class="modal hidden" role="dialog" aria-labelledby="editModalTitle" aria-modal="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="editModalTitle">Éditer le document</h3>
+                    <button class="modal-close" onclick="closeEditModal()" aria-label="Fermer">✕</button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="editContent" class="editor" placeholder="Contenu du document..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeEditModal()">Annuler</button>
+                    <button class="btn btn-primary" onclick="saveEditedDocument()">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de confirmation pour suppression -->
+        <div id="confirmModal" class="modal hidden" role="dialog" aria-labelledby="confirmTitle" aria-modal="true">
+            <div class="modal-content modal-confirm">
+                <div class="modal-header">
+                    <h3 id="confirmTitle">Confirmer la suppression</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Êtes-vous sûr de vouloir supprimer ce document ? Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeConfirmModal()">Annuler</button>
+                    <button class="btn btn-danger" onclick="confirmDelete()">Supprimer</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Conteneur pour les notifications toast -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
