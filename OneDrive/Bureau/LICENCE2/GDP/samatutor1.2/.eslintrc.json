@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 4],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["warn", "single"],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn",
+    "no-console": "off"
+  },
+  "globals": {
+    "appState": "writable",
+    "storage": "writable",
+    "showView": "writable",
+    "login": "writable",
+    "logout": "writable",
+    "showApp": "writable",
+    "init": "writable",
+    "loadUserData": "writable",
+    "showEnseignantDashboard": "writable",
+    "showEtudiantDashboard": "writable",
+    "showCreerDocument": "writable",
+    "genererDocument": "writable",
+    "sauvegarderDocument": "writable",
+    "showMesDocuments": "writable",
+    "viewDocument": "writable",
+    "editerDocument": "writable",
+    "supprimerDocument": "writable",
+    "telechargerDocument": "writable",
+    "closeEditModal": "writable",
+    "saveEditedDocument": "writable",
+    "closeConfirmModal": "writable",
+    "confirmDelete": "writable",
+    "showStatistiques": "writable",
+    "showTuteur": "writable",
+    "sendMessage": "writable",
+    "showQuiz": "writable",
+    "genererQuiz": "writable",
+    "showProgression": "writable",
+    "showDocumentsDisponibles": "writable",
+    "attachSidebarListeners": "writable",
+    "toggleSidebar": "writable",
+    "closeSidebar": "writable",
+    "focusMain": "writable",
+    "showHomePage": "writable",
+    "showLogin": "writable"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "build": {
+    "publish": "."
+  },
+  "build": {
+    "environment": {
+      "NODE_VERSION": "18.0.0"
+    }
+  }
+}

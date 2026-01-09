@@ -1,0 +1,31 @@
+{
+  "name": "samatutor-a11y",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "a11y": "node tools/a11y-scan.js",
+    "smoke": "node tools/smoke-test.js",
+    "lint": "eslint js/**/*.js",
+    "lint:fix": "eslint js/**/*.js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "test": "npm run lint && npm run smoke",
+    "test:all": "npm run lint && npm run smoke && npm run a11y"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "openai": "^6.15.0"
+  },
+  "devDependencies": {
+    "axe-core": "^4.6.3",
+    "eslint": "^8.57.0",
+    "jsdom": "^22.1.0",
+    "prettier": "^3.2.5"
+  }
+}
+

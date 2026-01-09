@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "npm ci",
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/api/ai",
+      "destination": "http://localhost:3001/api/ai"
+    }
+  ]
+}
