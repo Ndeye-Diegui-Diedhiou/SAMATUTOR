@@ -1,23 +1,22 @@
 {
-  "name": "samatutor-a11y",
+  "name": "samatutor",
   "version": "1.0.0",
-  "private": true,
+  "description": "Plateforme éducative complète - Backend Express + Frontend",
+  "main": "server/index.js",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
   },
   "scripts": {
-    "a11y": "node tools/a11y-scan.js",
-    "smoke": "node tools/smoke-test.js",
-    "lint": "eslint js/**/*.js",
-    "lint:fix": "eslint js/**/*.js --fix",
-    "format": "prettier --write \"**/*.{js,css,html,md}\"",
-    "test": "npm run lint && npm run smoke",
-    "test:all": "npm run lint && npm run smoke && npm run a11y"
+    "start": "cd server && npm install && npm start",
+    "dev": "cd server && npm run dev",
+    "test": "cd server && npm test",
+    "lint": "cd server && npm run lint",
+    "build": "echo 'Build complete'"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
+  "dependencies": {},
+  "devDependencies": {}
+}
     "express": "^5.2.1",
     "openai": "^6.15.0"
   },

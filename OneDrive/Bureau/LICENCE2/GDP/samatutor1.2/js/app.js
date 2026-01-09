@@ -1,3 +1,6 @@
+// Configuration de l'API backend
+const API_BASE_URL = 'https://0g7wxaqf.up.railway.app';
+
 // État de l'application
 const appState = {
     user: null,
@@ -90,7 +93,8 @@ async function callAiApi(endpoint, payload) {
             }
         }
 
-        const res = await fetch(endpoint, payload);
+        const fullUrl = endpoint.startsWith('http') ? endpoint : API_BASE_URL + endpoint;
+        const res = await fetch(fullUrl, payload);
         if (!res.ok) {
             const txt = await res.text();
             throw new Error(`API error: ${res.status} ${res.statusText} - ${txt}`);
@@ -508,7 +512,7 @@ async function exporterPDF() {
     try {
         showToast('⏳ Génération du PDF en cours...', 'info');
 
-        const response = await fetch('/api/generate-pdf', {
+        const response = await fetch(API_BASE_URL + '/api/generate-pdf', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
